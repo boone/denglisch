@@ -12,6 +12,8 @@ Demo site: http://denglisch.boonedocks.net
 * cd denglisch
 * bundle
 * rake db:migrate
+* download de-en.txt from http://ftp.tu-chemnitz.de/pub/Local/urz/ding/de-en/ into the data/ directory
+* rake import_data
 * ruby denglisch.rb
 * Visit http://localhost:4567
 * Enter a German or English word and click Search

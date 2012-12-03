@@ -5,3 +5,4 @@ doc/app
 .DS_Store
 .rvmrc
 database.yml
+data/de-en.txt

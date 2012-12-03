@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Denglisch &mdash; a German &ndash; English Mobile Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="/jqtouch/jqtouch.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/jqtouch/themes/apple/theme.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="screen" />
+    <script src="/javascripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/jqtouch/jqtouch.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/mobile.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="apple-touch-icon" href="/images/icon_57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/icon_72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/icon_114.png" />
+    <link rel="apple-touch-startup-image" href="/images/startup.png" />
+  </head>
+  <body>
+    <div id="jqt">
+      <div class="current" id="home">
+        <div class="toolbar">
+          <h1>Denglisch</h1>
+          <a href="#about" class="button">About</a>
+        </div>
+        <form action="/search" method="post" id="search_form">
+          <ul class="rounded">
+            <li><input type="text" name="query" placeholder="English or German here"></li>
+          </ul>
+          <a id="search_button" class="whiteButton submit">Search!</a>
+        </form>
+        <div id="instructions" class="info">
+          <p>Enter a German or English word above and tap search. Einfach!</p>
+        </div>
+        <div id="searching" class="info" style="display: none;">
+          <p>
+            Searching...
+            <img src="/images/spinner.gif" height="16" width="16" />
+          </p>
+        </div>
+        <div id="search_results" style="display: none;">
+        </div>
+        <div id="ad">
+          <script type="text/javascript"><!--
+            // XHTML should not attempt to parse these strings, declare them CDATA.
+            /* <![CDATA[ */
+            window.googleAfmcRequest = {
+              client: 'ca-mb-pub-5451557416174408',
+              format: '320x50_mb',
+              output: 'html',
+              slotname: '8057830434',
+            };
+            /* ]]> */
+          //--></script>
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>
+        </div>
+      </div>
+      <div id="about">
+        <div class="toolbar">
+          <a class="back">Back</a>
+          <h1>About</h1>
+        </div>
+        <div class="info">
+          <p>
+            This app was written by Mike Boone as a learning exercise in building a mobile web app.
+            And I wanted something to use on my iPhone!
+            <a href="http://boonedocks.net/mailmike.php" rel="external">Contact me</a>.
+            <a href="https://twitter.com/boonedocks" rel="external">@boonedocks on Twitter</a>
+          </p>
+          <p>The dictionary data is freely available <a href="http://ftp.tu-chemnitz.de/pub/Local/urz/ding/de-en/" rel="external">here</a>.</p>
+          <p>A very nice non-mobile dictionary site is <a href="http://dict.tu-chemnitz.de/" rel="external">Beolingus</a>.</p>
+          <p>
+            The website was built using
+            <a href="http://www.sinatrarb.com/" rel="external">Sinatra</a> and
+            <a href="http://jqtouch.com/" rel="external">jQTouch</a>.
+          </p>
+          <p><i>Denglisch</i> is a mix of German and English...see <a href="http://en.wikipedia.org/wiki/Denglisch" rel="external">Wikipedia</a>.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

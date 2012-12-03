@@ -1,0 +1,36 @@
+<% if !@query.blank? %>
+  <% if @exact_words.size > 0 || @embedded_words.size > 0 %>
+    <% if @exact_words.size > 0 %>
+      <p>Exact matches: <%= @exact_words.size %></p>
+  
+      <ul>
+        <% @exact_words.each do |word| %>
+          <li>
+            <img src="/images/de.png" width="17" height="14" alt="DE">
+            <%= highlight(word.german, @query) %>
+            &nbsp;&nbsp;<img src="/images/en.png" width="17" height="14" alt="EN"> <%= highlight(word.english, @query) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    
+    <% if @embedded_words.size > 0 %>
+      <p>Embedded matches: <%= @embedded_words.size %></p>
+  
+      <ul>
+        <% @embedded_words.each do |word| %>
+          <li>
+            <img src="/images/de.png" width="17" height="14" alt="DE"> <%= highlight(word.german, @query) %>
+            &nbsp;&nbsp;<img src="/images/en.png" width="17" height="14" alt="EN"> <%= highlight(word.english, @query) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>No results were found.</p>
+  <% end %>
+<% else %>
+  <div class="info">
+    <p>Please enter a search word and then click Search!</p>
+  </div>
+<% end %>

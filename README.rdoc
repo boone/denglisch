@@ -1,0 +1,25 @@
+= Denglisch
+
+Mobile-formatted German-English dictionary, using Sinatra and jQTouch.
+
+{<img src="https://travis-ci.org/boone/denglisch.png" />}[https://travis-ci.org/boone/denglisch]
+
+Demo site: http://denglisch.boonedocks.net
+
+== Setup
+
+* git clone git://github.com/boone/denglisch.git
+* cd denglisch
+* bundle
+* rake db:migrate
+* ruby denglisch.rb
+* Visit http://localhost:4567
+* Enter a German or English word and click Search
+
+It also works well on a Mac using the Pow server (http://pow.cx).
+
+== Contact
+
+http://boonedocks.net
+
+@boonedocks on Twitter

@@ -1,0 +1,4 @@
+#search_button { margin: 0 10px 10px 10px; }
+#about .info p { margin: 0 10px 10px 10px; text-align: left; }
+#search_results p { text-align: center; font-weight: bold; margin: 10px; }
+strong.highlight { background-color: rgba(255,255,0,0.9); color: red; }

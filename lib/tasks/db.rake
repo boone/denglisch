@@ -12,7 +12,7 @@ namespace :db do
   task :create do
     require 'yaml'
     require 'active_record'
-    DB_CONFIG = YAML.load_file("./config/database.yml")[ENV['RACK_ENV']]
+    DB_CONFIG ||= YAML.load_file("./config/database.yml")[ENV['RACK_ENV']]
     ActiveRecord::Base.establish_connection(:adapter => DB_CONFIG['adapter'], :database => nil,
                                             :username => DB_CONFIG['username'], :password => DB_CONFIG['password'],
                                             :host => DB_CONFIG['host'], :encoding => DB_CONFIG['encoding'],

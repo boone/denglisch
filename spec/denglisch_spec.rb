@@ -10,6 +10,8 @@ require 'rack/test'
 
 describe 'The Denglisch App' do
   include Rack::Test::Methods
+  
+  before(:each) { Word.delete_all }
 
   def app
     Sinatra::Application

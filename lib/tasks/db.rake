@@ -23,6 +23,14 @@ namespace :db do
   
   desc "Drop the database"
   task(:drop => :environment) do
-    ActiveRecord::Base.connection.drop_database DB_CONFIG['database']
+    begin
+      ActiveRecord::Base.connection.drop_database DB_CONFIG['database']
+    rescue Exception => e
+      if e.to_s =~ /Unknown database/
+        puts e
+      else
+        raise e
+      end
+    end
   end
 end

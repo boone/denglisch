@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 gem 'mysql2', '~> 0.3.10'
-gem 'activerecord', '~> 3.2.13'
+gem 'activerecord', '~> 3.2.16'
 gem 'rake'
 
 group :development, :test do

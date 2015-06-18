@@ -1,8 +1,8 @@
-source :rubygems
+source "https://rubygems.org"
 
 gem 'sinatra'
 gem 'mysql2', '~> 0.3.10'
-gem 'activerecord', '~> 3.2.16'
+gem 'activerecord', '~> 3.2.22'
 gem 'rake'
 
 group :development, :test do

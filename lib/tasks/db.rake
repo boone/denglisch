@@ -5,9 +5,9 @@ namespace :db do
     require 'logger'
     ActiveRecord::Base.logger = Logger.new(STDOUT)
     ActiveRecord::Migration.verbose = true
-    ActiveRecord::Migrator.migrate("db/migrate")
+    ActiveRecord::Migration.migrate("db/migrate")
   end
-  
+
   desc "Create the database"
   task :create do
     require 'yaml'
@@ -24,7 +24,7 @@ namespace :db do
                                             :host => DB_CONFIG['host'], :encoding => DB_CONFIG['encoding'],
                                             :reconnect => DB_CONFIG['reconnect'], :pool => DB_CONFIG['pool'])
   end
-  
+
   desc "Drop the database"
   task(:drop => :environment) do
     begin

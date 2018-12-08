@@ -1,10 +1,8 @@
 = Denglisch
 
+<b>Thanks for visiting, this repo is now archived and read-only. If you want to use this software, it will require significant updates to be functional and secure.</b>
+
 Mobile-formatted German-English dictionary, using Sinatra and jQTouch.
-
-{<img src="https://travis-ci.org/boone/denglisch.png" />}[https://travis-ci.org/boone/denglisch]
-
-Demo site: http://denglisch.boonedocks.net
 
 == Setup
 
